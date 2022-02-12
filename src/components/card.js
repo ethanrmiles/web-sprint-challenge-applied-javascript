@@ -1,23 +1,32 @@
 const Card = (article) => {
-  // TASK 5
-  // ---------------------
-  // Implement this function, which should return the markup you see below.
-  // It takes as its only argument an "article" object with `headline`, `authorPhoto` and `authorName` properties.
-  // The tags used, the hierarchy of elements and their attributes must match the provided markup exactly!
-  // The text inside elements will be set using their `textContent` property (NOT `innerText`).
-  // Add a listener for click events so that when a user clicks on a card, the headline of the article is logged to the console.
-  //
-  // <div class="card">
-  //   <div class="headline">{ headline }</div>
-  //   <div class="author">
-  //     <div class="img-container">
-  //       <img src={ authorPhoto }>
-  //     </div>
-  //     <span>By { authorName }</span>
-  //   </div>
-  // </div>
-  //
+//   const cardObj = document.createElement('div');
+//   const headline = document.createElement('div');
+//   const authorDiv = document.createElement('div');
+//   const imgContainer = document.createElement('div');
+//   const img = document.createElement('img');
+//   const authorName = document.createElement('span');
+
+//   imgContainer.appendChild(img);
+//   authorDiv.appendChild(imgContainer);
+//   authorDiv.appendChild(authorName);
+//   cardObj.appendChild(headline);
+//   cardObj.appendChild(authorDiv)
+
+// cardObj.classList.add('card');
+// headline.classList.add('headline');
+// authorDiv.classList.add('author');
+// imgContainer.classList.add('img-container');
+
+// headline.textContent = ${headline}
+// authorName.textContent = ${authorName}
+// img.src = imageURL;
+
+
+// console.log(cardObj)
+//   return cardObj
 }
+
+Card();
 
 const cardAppender = (selector) => {
   // TASK 6

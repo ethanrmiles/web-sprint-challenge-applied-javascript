@@ -6,12 +6,14 @@ const Tabs = (topics) => {
   tabsDiv.classList.add('topics');
 
 topics.forEach(topic => {
- console.log(topic)
+ const content = topic
+ tabItems.textContent = content
+  console.log("content", tabItems);
 })
-  return tabsDiv
+  return tabsDiv;
 }
-Tabs(['a', 'b'])
-
+// Tabs(['a', 'b'])
+Tabs(['javascript', 'bootstrap', 'technology'])
 
 const tabsAppender = (selector) => {
   // TASK 4
