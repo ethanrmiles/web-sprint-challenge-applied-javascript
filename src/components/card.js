@@ -18,9 +18,9 @@ headlineObj.classList.add('headline');
 authorDiv.classList.add('author');
 imgContainer.classList.add('img-container');
 
-// headlineObj.textContent = article.headline
-// authorName.textContent = article.authorName
-// img.src = article.authorPhoto
+headlineObj.textContent = article.headline
+authorName.textContent = article.authorName
+img.src = article.authorPhoto
 
 
   return cardObj
@@ -40,8 +40,28 @@ const cardAppender = (selector) => {
   //
 
   axios.get('http://localhost:5000/api/articles')
-  .then(resp =>
-    console.log(resp.data.articles))
+  .then(resp => {
+    resp.data.articles.bootstrap.forEach(obj => {
+      document.querySelector(selector).appendChild(Card(obj))
+    })
+
+    resp.data.articles.javascript.forEach(obj => {
+      document.querySelector(selector).appendChild(Card(obj))
+    })
+
+    resp.data.articles.jquery.forEach(obj => {
+      document.querySelector(selector).appendChild(Card(obj))
+    })
+
+    resp.data.articles.node.forEach(obj => {
+      document.querySelector(selector).appendChild(Card(obj))
+    })
+
+    resp.data.articles.technology.forEach(obj => {
+      document.querySelector(selector).appendChild(Card(obj))
+    })
+
+  }) //Closing to .then
     .catch(err => console.error(err))
 }
 
