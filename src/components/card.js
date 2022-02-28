@@ -18,9 +18,9 @@ headlineObj.classList.add('headline');
 authorDiv.classList.add('author');
 imgContainer.classList.add('img-container');
 
-headlineObj.textContent = article.headline
-authorName.textContent = article.authorName
-img.src = article.authorPhoto
+// headlineObj.textContent = article.headline
+// authorName.textContent = article.authorName
+// img.src = article.authorPhoto
 
 
   return cardObj
@@ -29,25 +29,22 @@ img.src = article.authorPhoto
 
 // document.querySelector('.cards-container').appendChild(Card(fakeData))
 
-
 const cardAppender = (selector) => {
-//   axios.get('http://localhost:5000/api/articles')
-// .then(resp => {
-//   console.log(resp.data.articles)
-//   const bootstrapObj = resp.data.articles.bootstrap
-//   const javaScriptObj = resp.data.articles.javascript
-//   const jqueryObj = resp.data.articles.jquery
-//   const nodeObj = resp.data.articles.node
-//   const technology = resp.data.articles.technology
+  // TASK 6
+  // ---------------------
+  // Implement this function that takes a css selector as its only argument.
+  // It should obtain articles from this endpoint: `http://localhost:5000/api/articles` (test it in Postman/HTTPie!).
+  // However, the articles do not come organized in a single, neat array. Inspect the response closely!
+  // Create a card from each and every article object in the response, using the Card component.
+  // Append each card to the element in the DOM that matches the selector passed to the function.
+  //
 
-//   const injection = bootstrapObj
-
-
-// .catch(err => {
-//   console.error(err)
-// })
-// .finally(() => console.log('done'))
+  axios.get('http://localhost:5000/api/articles')
+  .then(resp =>
+    console.log(resp.data.articles))
+    .catch(err => console.error(err))
 }
 
-
 export { Card, cardAppender }
+
+

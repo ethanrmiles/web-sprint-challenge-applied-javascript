@@ -4,8 +4,8 @@ const Header = (title, date, temp) => {
   const dateObj = document.createElement('span');
   const tempObj = document.createElement('span');
   
-  titleObj.textContent = title;
   dateObj.textContent = date;
+  titleObj.textContent = title;
   tempObj.textContent = temp;
 
   headerDiv.appendChild(titleObj);
@@ -14,13 +14,13 @@ const Header = (title, date, temp) => {
 
   headerDiv.classList.add('header');
   dateObj.classList.add('date');
-  titleObj.classList.add('temp');
+  tempObj.classList.add('temp')
 
 return headerDiv;
 }
 
 const headerAppender = (selector) => {
- document.querySelector(selector).appendChild(Header('Lambda Times', 'February 11, 2022', '73º'));
+ document.querySelector(selector).appendChild(Header('Lambda Times', 'February 11, 2022', '73'));
 }
 
 export { Header, headerAppender }
